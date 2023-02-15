@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    background-image: url('./images/bg-pattern-bottom-desktop.svg'),url('./images/bg-pattern-top-desktop.svg');
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    /* padding: 10rem 15rem; */
+    background-repeat: no-repeat,no-repeat;
+    background-position: right bottom,left top;
+    /* justify-items: center; */
+    /* grid-template-columns: ; */
+    
+    
+}
+main{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+
+}
+header {
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    padding-right: 4rem;
+}
+header h1{
+
+    font-weight: 700;
+    font-size: 5.5rem;
+    color: hsl(300, 43%, 22%);
+}
+header h4{
+    color: hsl(303, 10%, 53%);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+}
+.ratingSection{
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+}
+.rating{
+    background-color: hsl(300, 60%, 96%);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    color: hsl(300, 43%, 22%);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    width: 80%;
+    gap: 2rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: left;
+    /* gap: 1rem; */
+}
+#rating1{
+    justify-self: start;
+}
+#rating2{
+    justify-self: center;
+}
+#rating3{
+    justify-self: end;
+}
+section{
+    
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    gap: 3rem;
+    grid-column: 1/-1;
+
+}
+.commentsection{
+
+    display: grid;
+    height: 85%;
+    border-radius: 1rem ;
+    padding: 4rem 3rem;
+    gap: 2rem;
+    background-color: hsl(300, 43%, 22%);
+    
+}
+.user_info{
+    align-items: center;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 2.55rem;
+    font-size:1.5rem ;
+
+}
+.user_info img{
+    width: 4rem;
+    border-radius:50%;
+
+}
+.user_info h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+}
+.user_info div {
+    display: grid;
+    gap: 0.75rem;
+}
+.user_info h5{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:hsl(333, 80%, 67%);
+}
+.commentsection p{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color:hsl(0, 0%, 100%);
+    line-height: 2rem;
+}
+#comment1{
+    align-self: start;
+}
+#comment2{
+    align-self: center;
+}
+#comment3{
+    align-self: end;
+}
+@media screen and (max-width:1350px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media screen and (max-width:1133px) {
+    .rating{
+        grid-auto-flow:row;
+        grid-template-rows: max-content auto;
+    }
+}
+@media screen and (max-width:800px) {
+    section{
+        grid-template-rows: auto auto;
+        gap: 0rem 3rem;
+       
+    }
+    #comment1,    #comment2 , #comment3 {
+        align-self: auto;
+    }
+    #comment2{
+        align-self: auto;
+    }
+   {
+        align-self: auto;
+    }
+    #rating1, #rating, #rating3{
+        justify-self: auto;
+    }
+    .rating{width: auto;}
+}
+@media screen and (max-width:600px) {
+    main{
+        width: 90%;
+    }
+    body{
+        background-image: url('./images/bg-pattern-bottom-mobile.svg'),url('./images/bg-pattern-top-mobile.svg');
+    }
+
+}
+@media screen and (max-width:550px) {
+    main{
+        padding:5rem 0 ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .rating{
+        grid-template-columns: max-content auto;
+        grid-template-rows: auto;
+    }
+    section{
+        grid-auto-flow: row;
+    }
+
+}
